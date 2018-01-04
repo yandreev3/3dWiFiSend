@@ -220,7 +220,7 @@ if __name__ == '__main__':
     printDev.ipaddr = sys.argv[1]
     printDev.name = 'Xpro'
     printDev.gcodeFile = sys.argv[2]
-    printDev.fileName = 'data.gcode.tz'    
+    printDev.fileName = printDev.gcodeFile[2:] + '.tz'   
     printDev.dataCompressThread()
     time.sleep(2)
     logger.info('3D Printer ' + printDev.name + ' IP address: ' + printDev.ipaddr)
