@@ -33,3 +33,26 @@ The first argument is the ip address of the printer. Second argument is the name
 youtube video:   https://youtu.be/agJc9IzfyQk
 
 note: Now works on mac and against QIDI X-MAX as well.
+
+
+###Erratta
+
+Sources for M Commands:
+
+experimentation with just sending codes to the printer and seeing what happens:
+
+    echo "M4001" | nc -u 192.168.3.100 3000
+    
+ -and-
+
+observation of QIDI Print softare interacting with printer via tcpdump:  
+
+    sudo tcpdump -i en9 -nn -s0 -v host 192.168.3.100
+
+  -and-
+  
+[GCode Spec](https://reprap.org/wiki/G-code#M115:_Get_Firmware_Version_and_Capabilities)
+
+[Similar printer board info](https://github.com/Photonsters/anycubic-photon-docs/blob/master/photon-blueprints/readme.md)
+
+[Similar board, diffeent info site](https://github.com/Photonsters/anycubic-photon-docs/blob/master/photon-blueprints/ChituClientWifiProtocol-translated.txt)
